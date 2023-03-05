@@ -11,7 +11,7 @@ module EasyMl
     end
 
     def to_s
-      partitions
+      @partitions
     end
 
     def perform(iterations = 5)
@@ -21,7 +21,7 @@ module EasyMl
       end
     end
 
-    def restart!
+    def restart
       setup_cluster
       expect
     end
