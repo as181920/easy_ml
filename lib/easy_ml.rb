@@ -9,7 +9,7 @@ module EasyMl
     attr_writer :logger
 
     def logger
-      @logger ||= defined?(Rails) ? Rails.logger : Logger.new($stdout)
+      @logger ||= defined?(Rails) ? Rails.logger : Logger.new($stdout, formatter: Logger::Formatter.new)
     end
   end
 end
